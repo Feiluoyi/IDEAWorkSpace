@@ -1,5 +1,7 @@
 package Base.MyLinkedList;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -142,6 +144,31 @@ public class SingleLinkedList {
             return true;
         }
     }
+    public boolean isPalindrome1(){
+        if(head==null) return false;
+        if(count==1) return true;
+        Node fast=head;
+        Node slow=head;
+        Stack<Node> stack=new Stack<>();
+        while(fast!=null){
+            if(fast.next!=null) {
+                stack.push(slow);
+                fast=fast.next.next;
+                slow=slow.next;
+            }
+            else{
+                slow=slow.next;
+                break;
+            }
+        }
+        while(!stack.isEmpty()){
+            if(stack.pop().val!=slow.val) return false;
+            else {
+                slow=slow.next;
+            }
+        }
+        return true;
+    }
     public boolean isEmpty()
     {
         if(count==0) return true;
@@ -152,11 +179,11 @@ public class SingleLinkedList {
         SingleLinkedList sin=new SingleLinkedList();
 //        System.out.println(sin.isEmpty());
         sin.addNode(5);
-        sin.addNode(6);
-        sin.addNode(5);
-        //sin.addNode(5);
-        System.out.println(sin.isPalindrome());
-//        sin.print();
+//        sin.addNode(6);
+//        sin.addNode(6);
+//        sin.addNode(5);
+        System.out.println(sin.isPalindrome1());
+        Map<Integer,Integer> map=new HashMap<>();//        sin.print();
 //        sin.reverse();
 //        sin.print();
 //        sin.reverse();
