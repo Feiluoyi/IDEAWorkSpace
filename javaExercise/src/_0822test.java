@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -17,7 +18,16 @@ public class _0822test {
         return new String(cha);
     }
     public static void main(String[] args) {
-        _0822test te=new _0822test();
-        System.out.println(te.reverseVowels("hello"));
+        BigDecimal big=new BigDecimal(3.00e10);
+        BigDecimal big2=new BigDecimal("3.4");
+        BigDecimal big3=new BigDecimal("2.3");
+        BigDecimal big4=new BigDecimal("0.3");
+        double dd=3.5;
+        double dd2=3.4;
+        System.out.println(dd+dd2);
+        System.out.println(big.add(big2));
+        System.out.println(big3);
+        System.out.println(big.divide(big4, 2, 0));
+        System.out.println(big.toEngineeringString());
     }
 }
