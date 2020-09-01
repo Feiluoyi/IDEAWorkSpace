@@ -18,6 +18,31 @@ public class _0822test {
         return new String(cha);
     }
     public static void main(String[] args) {
+        int[][][][] arr=new int[2][2][2][2];
+        //数组初始就是0,不赋值也没什么问题
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                for (int k = 0; k < arr[i][j].length; k++) {
+                    for (int l = 0; l < arr[i][j][k].length; l++) {
+                        arr[i][j][k][l]=(int)(Math.random()*100);
+                    }
+                }
+            }
+        }
+        //Arrays.fill(arr,1);多维数组不可以这么用,还是需要循环
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                for (int k = 0; k < arr[i][j].length; k++) {
+                    for (int l = 0; l < arr[i][j][k].length; l++) {
+                        System.out.print(arr[i][j][k][l]+" ");
+                    }
+                    System.out.println();
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+
         BigDecimal big=new BigDecimal(3.00e10);
         BigDecimal big2=new BigDecimal("3.4");
         BigDecimal big3=new BigDecimal("2.3");

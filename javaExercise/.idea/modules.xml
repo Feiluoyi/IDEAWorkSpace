@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaIOStream/JavaIOStream.iml" filepath="$PROJECT_DIR$/JavaIOStream/JavaIOStream.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaExercise.iml" filepath="$PROJECT_DIR$/javaExercise.iml" />
     </modules>
   </component>
