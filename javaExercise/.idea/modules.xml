@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaIOStream/JavaIOStream.iml" filepath="$PROJECT_DIR$/JavaIOStream/JavaIOStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScannerTest/ScannerTest.iml" filepath="$PROJECT_DIR$/ScannerTest/ScannerTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TCPtest1/TCPtest1.iml" filepath="$PROJECT_DIR$/TCPtest1/TCPtest1.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaExercise.iml" filepath="$PROJECT_DIR$/javaExercise.iml" />
     </modules>
   </component>
