@@ -52,3 +52,40 @@ public class _39EightQueens {
             System.out.println();
     }
 }
+class Solution {
+    List<List<String>> arr=new ArrayList<List<String>>();
+    int rows;
+    int[] result;
+    public List<List<String>> solveNQueens(int n) {
+        rows=n;
+        result=new int[rows];
+        //生成结果的方法
+        queens(0);
+        return arr;
+    }
+    private void queens(int row){
+        if(row==rows){
+            //将结果放入数组中
+            arr.add(arrange(result));
+            return;
+        }
+        for(int column=0;column<rows;column++){
+            if(isRight(row,column)){
+                result[row]=column;
+                queens(row+1);
+            }
+        }
+    }
+    private boolean isRight(int row,int column){
+        int left=column-1;
+        int right=column+1;
+        for(int i=row-1;i>=0;i--){
+            if(result[i]==column||result[row]==left||result[row]==right)  return false;
+            else {
+                left--;
+                right++;
+            }
+        }
+        return true;
+    }
+}
